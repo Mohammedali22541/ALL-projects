@@ -361,25 +361,25 @@ namespace Assignment_3
             ///Example , Input: Month Number: 1 , Output: Days in Month: 31
 
 
-            Console.Write("Write A month Number: ");
-           bool isMonthNumberValid = int.TryParse(Console.ReadLine(), out int monthNumber);
+           // Console.Write("Write A month Number: ");
+           //bool isMonthNumberValid = int.TryParse(Console.ReadLine(), out int monthNumber);
 
-            if (isMonthNumberValid && monthNumber >= 1 && monthNumber <= 12)
-            {
-                if (monthNumber == 4 || monthNumber == 6 || monthNumber == 9 || monthNumber == 11)
-                {
-                    Console.WriteLine("Days in Month: 30 Days");
-                } else if (monthNumber == 2)
-                {
-                    Console.WriteLine("Days in Month: 28 Days or 29 Days :) ");
+           // if (isMonthNumberValid && monthNumber >= 1 && monthNumber <= 12)
+           // {
+           //     if (monthNumber == 4 || monthNumber == 6 || monthNumber == 9 || monthNumber == 11)
+           //     {
+           //         Console.WriteLine("Days in Month: 30 Days");
+           //     } else if (monthNumber == 2)
+           //     {
+           //         Console.WriteLine("Days in Month: 28 Days or 29 Days :) ");
 
-                }
-                else
-                {
-                    Console.WriteLine("Days in Month: 31 Days");
+           //     }
+           //     else
+           //     {
+           //         Console.WriteLine("Days in Month: 31 Days");
 
-                }
-            }
+           //     }
+           // }
 
             #endregion
         }
