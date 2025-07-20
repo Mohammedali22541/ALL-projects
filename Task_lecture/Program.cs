@@ -7,6 +7,8 @@ namespace Task_lecture
         static void Main(string[] args)
         {
 
+
+
             #region Question 1
             ///bool isParsed;
             ///int number; 
@@ -210,6 +212,22 @@ namespace Task_lecture
 
             #region Question 7
 
+            #endregion
+
+            #region question from past task 
+            //Write a program to allow the user to enter int and print the REVERSED of it.
+            ///Console.Write("Enter Number To Reversed: ");
+            ///bool isParsed = int.TryParse(Console.ReadLine(), out int number);
+            ///int reversed = 0;
+            ///
+            ///if (isParsed) {
+            ///    while (number > 0) {
+            ///       int newNum = number % 10;
+            ///        reversed = reversed * 10 + newNum; 
+            ///        number /= 10;
+            ///    }      
+            ///}
+            ///Console.WriteLine(reversed);
             #endregion
 
         }
