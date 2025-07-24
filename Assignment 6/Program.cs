@@ -125,10 +125,20 @@ namespace Assignment_6
         ///    maximum = numbers.Max();
         ///}
 
-        /// 7 
+        /// calculate the factorial of the number 
+        ///public static int CalcFactorial(int number) { 
+        ///
+        ///    int factorial = 1;
+        ///    for (int i = 1; i <= number; i++)
+        ///    {
+        ///        factorial = factorial * i;
+        ///    }
+        ///    return factorial;
+        ///
+        ///}
 
         /// function named "ChangeChar" to modify a letter
-        
+
         public static void ChangeChar(string message , string character)
         {
             Console.WriteLine ($"{message}\r{character}" );
@@ -287,11 +297,13 @@ namespace Assignment_6
 
             #region Question 7
 
+            ///int factorialResult = CalcFactorial(6);
+            ///Console.WriteLine(factorialResult);
             #endregion
 
             #region Question 8
 
-            ChangeChar("Mohammed", "j");
+            //ChangeChar("Mohammed", "j");
 
 
 
