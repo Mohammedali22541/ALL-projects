@@ -139,10 +139,10 @@ namespace Assignment_6
 
         /// function named "ChangeChar" to modify a letter
 
-        public static void ChangeChar(string message , string character)
+        public static void ChangeChar(string message , int index ,  string character)
         {
-            Console.WriteLine ($"{message}\r{character}" );
-
+            Char[] Chararray =  message.ToCharArray();
+            Chararray[index]
         }
         static void Main(string[] args)
         {
@@ -187,7 +187,6 @@ namespace Assignment_6
 
 
             #endregion
-
 
             #region Question 2
 
