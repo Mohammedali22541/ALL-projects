@@ -207,7 +207,7 @@ namespace Assignment_2___C__advance
 
         static void Main(string[] args)
         {
-            #region Part 1
+            #region Part 1 
             #region Question 1
 
             ///ArrayList numbers = new ArrayList(){ 1, 2, 3, 4, 5, 6 };
