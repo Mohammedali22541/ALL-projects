@@ -11,7 +11,7 @@ namespace Assignment_2___C__advance
 
             for (int i = 0; i < arr.Count; i++)
             {
-                stack.Push(  (int)arr[i]  );
+                stack.Push(  (int)arr[i]  ); 
             }
 
             arr.Clear();    
