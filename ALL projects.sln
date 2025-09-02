@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment 6 oop", "Assignm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C# advance - Delegates", "C# advance - Delegates\C# advance - Delegates.csproj", "{B455F27E-DA2C-4698-95A5-EE7D6D5AA10C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections Part 2 - Session 4", "Collections Part 2 - Session 4\Collections Part 2 - Session 4.csproj", "{005218E7-C17B-427B-AE4C-073545FF5EF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{B455F27E-DA2C-4698-95A5-EE7D6D5AA10C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B455F27E-DA2C-4698-95A5-EE7D6D5AA10C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B455F27E-DA2C-4698-95A5-EE7D6D5AA10C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{005218E7-C17B-427B-AE4C-073545FF5EF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{005218E7-C17B-427B-AE4C-073545FF5EF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{005218E7-C17B-427B-AE4C-073545FF5EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{005218E7-C17B-427B-AE4C-073545FF5EF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
