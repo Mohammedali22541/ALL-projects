@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections Part 2 - Sessio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinQ - Session 1", "LinQ - Session 1\LinQ - Session 1.csproj", "{6344B6CD-1872-4289-8C1F-BBE8D6434514}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF-Core 1", "EF-Core 1\EF-Core 1.csproj", "{49F67872-3594-4257-8FE6-B403C8E104F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{6344B6CD-1872-4289-8C1F-BBE8D6434514}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6344B6CD-1872-4289-8C1F-BBE8D6434514}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6344B6CD-1872-4289-8C1F-BBE8D6434514}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49F67872-3594-4257-8FE6-B403C8E104F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F67872-3594-4257-8FE6-B403C8E104F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F67872-3594-4257-8FE6-B403C8E104F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F67872-3594-4257-8FE6-B403C8E104F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
