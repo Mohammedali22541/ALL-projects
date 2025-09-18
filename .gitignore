@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/All_Library
+/Lecture Task
+/SQL Assignment
+/Task 3
