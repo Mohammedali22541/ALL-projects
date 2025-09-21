@@ -7,11 +7,11 @@ namespace EF_Core_1
     {
         static void Main(string[] args)
         {
-            using ItiDbContext itiDbContext = new ItiDbContext();
-            itiDbContext.Database.Migrate();
+            //using ItiDbContext itiDbContext = new ItiDbContext();
+            //itiDbContext.Database.Migrate();
 
-            using AirLineDbContext airLineDbContext = new AirLineDbContext();
-            airLineDbContext.Database.Migrate();
+            //using AirLineDbContext airLineDbContext = new AirLineDbContext();
+            //airLineDbContext.Database.Migrate();
 
         }
     }
