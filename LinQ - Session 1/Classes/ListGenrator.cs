@@ -13,9 +13,12 @@ namespace LinQ___Session_1.Classes
     {
         public static List<Product>? ProductsList {  get; set; }
         public static List<Customer>? CustomersList { get; set; }
+        public static List<string>? DictionariesEnglishList { get; set; }
 
-         static ListGenrator()
+        static ListGenrator()
         {
+
+            DictionariesEnglishList = File.ReadAllLines("dictionary_english.txt").ToList();
             ProductsList = new List<Product>()
             {
 
