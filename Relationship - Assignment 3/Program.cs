@@ -2,6 +2,7 @@
 using Relationship___Assignment_3.DataBaseContext;
 using Relationship___Assignment_3.Models;
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.Numerics;
 
 namespace Relationship___Assignment_3
@@ -15,6 +16,7 @@ namespace Relationship___Assignment_3
 
             //airlineDbContext.Database.Migrate();
 
+            #region Assignment 3
             #region A
             //a.Insert a new airline named "EgyptAir" with contact person "Ahmed Ali", phone "0123456789" and “0113654789”, and address "Cairo".
 
@@ -34,7 +36,7 @@ namespace Relationship___Assignment_3
             #region B
             //b. Add a new aircraft with model "Model01", capacity 180, and airline = "EgyptAir".
 
-            var egyptair  = airlineDbContext.Set<Airline>().Where(a=>a.AirlineName == Airline1.AirlineName)
+            var egyptair = airlineDbContext.Set<Airline>().Where(a => a.AirlineName == Airline1.AirlineName)
                 .Select(a => a.AirlineID).SingleOrDefault();
 
             var aircraft1 = new Aircraft()
@@ -54,7 +56,6 @@ namespace Relationship___Assignment_3
             //}
 
             #endregion
-
             #region C
             //Record a new transaction of amount 50000 with description "Tickets" for "EgyptAir".
 
@@ -69,7 +70,6 @@ namespace Relationship___Assignment_3
             //airlineDbContext.Add(transaction1 );
             //airlineDbContext.SaveChanges();
             #endregion
-
             #region D
             // d.Select all employees who work in "EgyptAir".
 
@@ -79,7 +79,6 @@ namespace Relationship___Assignment_3
             //      Console.WriteLine($"{employee.ContactPerson}");
             //  }
             #endregion
-
             #region E
 
             //e. Show all transactions (id, description, amount) recorded by "EgyptAir".
@@ -100,7 +99,6 @@ namespace Relationship___Assignment_3
             //}
 
             #endregion
-
             #region f
             //Get the total number of employees working in each airline.
 
@@ -115,7 +113,6 @@ namespace Relationship___Assignment_3
 
             //}
             #endregion
-
             #region G
             // Change the capacity of the “Model01”  aircraft to  200.
 
@@ -139,7 +136,6 @@ namespace Relationship___Assignment_3
             //airlineDbContext.Transactions.RemoveRange(transactionOlderThan2020);
             //airlineDbContext.SaveChanges();
             #endregion
-
             #region I
             //Insert a new route from "Cairo" to "Dubai",classification "International", distance 2400 km.
 
@@ -167,27 +163,152 @@ namespace Relationship___Assignment_3
 
             // Assign  “Model01”  aircraft to Route From  "Cairo"  to "Dubai".With duration 4 hours, price 3000 LE
 
-            var aircraft = airlineDbContext.Aircrafts.SingleOrDefault(a=>a.Model== "Model01");
+            //var aircraft = airlineDbContext.Aircrafts.SingleOrDefault(a => a.Model == "Model01");
 
-            var route = airlineDbContext.Routes.FirstOrDefault(a => a.Orgin == "Cairo"&& a.Distination == "Dubai");
+            //var route = airlineDbContext.Routes.FirstOrDefault(a => a.Orgin == "Cairo" && a.Distination == "Dubai");
 
-            var aircraftaRoute = new AircraftRoute()
+            //var aircraftaRoute = new AircraftRoute()
+            //{
+            //    Aircraft_Id = aircraft?.Id ?? 0,
+            //    Duration = 4,
+            //    Price = 3000,
+            //    RouteId = route?.RouteId ?? 0,
+            //    Departure = "Evenning"
+
+
+            //};
+
+            //airlineDbContext.Add(aircraftaRoute);
+            //airlineDbContext.SaveChanges();
+
+
+
+
+            #endregion
+            #endregion
+            #region Assignment 4
+            #region Section A : Loading Related Data 
+
+            #region Q1
+            // 1. Load "EgyptAir" With all its aircrafts and their routes 
+
+
+
+            //var allData = airlineDbContext.Airlines.Where(a=>a.AirlineName == "EgyptAir").Include(a => a.Aircraft)
+            //    .ThenInclude(a => a.AircraftRoutes).FirstOrDefault();
+
+            //Console.WriteLine(allData?.AirlineName);
+            //foreach (var item in allData?.Aircraft)
+            //{
+            //    Console.WriteLine($"{item.Id} , {item.Capacity}");
+
+            //    foreach (var item1 in item.AircraftRoutes)
+            //    {
+            //        Console.WriteLine($"{item1.Aircraft_Id} , {item1.Arrival} , {item1.Duration} ");
+            //    }
+            //} 
+            #endregion
+
+            #region Q2
+            //2. Retrieve all airlines with their employees, and for each employee load their qualifications. 
+
+            //var AirLineEmployee = airlineDbContext.Airlines.Include(a => a.Employees)
+            //    .ThenInclude(EQ => EQ.EmployeeQualifications).Select(a => a);
+
+
+            //foreach (var item in AirLineEmployee)
+            //{
+            //    Console.WriteLine($"{item.AirlineName}");
+            //    foreach (var item1 in item.Employees)
+            //    {
+            //    Console.WriteLine($"{item1.EmpName}");
+
+            //        foreach (var item2 in item1.EmployeeQualifications)
+            //        {
+            //    Console.WriteLine($"{item2.Qualification}");
+
+            //        }
+
+            //    }
+
+            //}
+            #endregion
+
+            #region Q3
+            // Load all airlines with their transactions, but only include transactions where Amount > 10000
+
+            //var TransactionBiggerThan10000 = airlineDbContext.Airlines.Include(a => a.Transactions.Where(a => a.TransactionAmount > 10000));
+
+            //foreach (var airline in TransactionBiggerThan10000)
+            //{
+            //    Console.WriteLine($"Airline: {airline.AirlineName}");
+            //    foreach (var trans in airline.Transactions)
+            //    {
+            //        Console.WriteLine($"  Transaction: {trans.TransactionId}, {trans.TransactionDescription}, {trans.TransactionAmount}");
+            //    }
+            //}
+
+            #endregion
+
+            #region Q4
+            //4. Select all routes along with the model of aircrafts assigned to them 
+
+            //var AllRoutes = airlineDbContext.Routes.Include(a => a.AircraftRoutes).ThenInclude(a=>a.Aircraft);
+
+            //foreach (var route in AllRoutes)
+            //{
+            //    Console.WriteLine($"Route: {route.Orgin} TO {route.Distination}");
+
+            //    foreach (var ar in route.AircraftRoutes)
+            //    {
+            //        Console.WriteLine($"  Aircraft Model: {ar.Aircraft.Model}, Duration: {ar.Duration}, Price: {ar.Price}");
+            //    }
+            //}
+
+
+            #endregion
+
+            #region Q5
+            // Retrieve all aircrafts with their airline and the airline’s phones.
+
+            //var allAircraftWithAirline = airlineDbContext.Aircrafts.Include(a => a.Airline).ThenInclude(a => a.AirLinePhones);
+
+            //foreach (var ac in allAircraftWithAirline)
+            //{
+            //    Console.WriteLine($"Aircraft: {ac.Model}, Capacity: {ac.Capacity}");
+
+            //    if (ac.Airline != null)
+            //    {
+            //        Console.WriteLine($"  Airline: {ac.Airline.AirlineName}");
+
+            //        foreach (var phone in ac.Airline.AirLinePhones)
+            //        {
+            //            Console.WriteLine($"    Phone: {phone.PhoneNumber}");
+            //        }
+            //    }
+            //}
+            #endregion
+            #endregion
+
+            #region Section B : Join Operators 
+            #region Q1
+            // 1. List all employees with their airline name. 
+
+            var allEmployeeWithAirlineName = airlineDbContext.Employees.Join(airlineDbContext.Airlines, a => a.AirlineID, r => r.AirlineID, (a, r) => new
             {
-                Aircraft_Id = aircraft?.Id ?? 0,
-                Duration = 4,
-                Price = 3000,
-                RouteId = route?.RouteId??0,
-                Departure = "Evenning"
+                EmployeeName = a.EmpName,
+                AirlineName = r.AirlineName,
+
+            });
 
 
-            };
 
-            airlineDbContext.Add(aircraftaRoute);
-            airlineDbContext.SaveChanges();
-
-            
-
-
+            foreach (var item in allEmployeeWithAirlineName)
+            {
+                Console.WriteLine($"Employee: {item.EmployeeName}, Airline: {item.AirlineName}");
+            } 
+            #endregion
+            #endregion
             #endregion
 
 
