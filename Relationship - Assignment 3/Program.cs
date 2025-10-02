@@ -186,6 +186,7 @@ namespace Relationship___Assignment_3
 
             #endregion
             #endregion
+
             #region Assignment 4
             #region Section A : Loading Related Data 
 
@@ -294,19 +295,66 @@ namespace Relationship___Assignment_3
             #region Q1
             // 1. List all employees with their airline name. 
 
-            var allEmployeeWithAirlineName = airlineDbContext.Employees.Join(airlineDbContext.Airlines, a => a.AirlineID, r => r.AirlineID, (a, r) => new
-            {
-                EmployeeName = a.EmpName,
-                AirlineName = r.AirlineName,
+            //var allEmployeeWithAirlineName = airlineDbContext.Employees.Join(airlineDbContext.Airlines, a => a.AirlineID, r => r.AirlineID, (a, r) => new
+            //{
+            //    EmployeeName = a.EmpName,
+            //    AirlineName = r.AirlineName,
 
-            });
+            //});
 
 
 
-            foreach (var item in allEmployeeWithAirlineName)
-            {
-                Console.WriteLine($"Employee: {item.EmployeeName}, Airline: {item.AirlineName}");
-            } 
+            //foreach (var item in allEmployeeWithAirlineName)
+            //{
+            //    Console.WriteLine($"Employee: {item.EmployeeName}, Airline: {item.AirlineName}");
+            //}
+            #endregion
+
+            #region Q2 
+            // مش عارف احله بصراحه بس هبحث فيه
+            // 2. Show all routes with the aircraft model assigned and the airline name that owns the aircraft. 
+
+            //var allRoutes = airlineDbContext.AircraftRoutes.Join(airlineDbContext.Routes, ar => ar.RouteId, r => r.RouteId,
+            //    (ar, r) => new { ar, r }).Join(airlineDbContext.Employees , 
+            //    a=>a.ar. , m=>m.AirlineID
+            //    )
+            #endregion
+
+            #region Q3
+            // 3. For each airline, list its aircraft models. 
+            //var AircraftAirline = airlineDbContext.Airlines.Join(airlineDbContext.Aircrafts,
+            //    a => a.AirlineID, ar => ar.AirlineID, (a, ar) => new
+            //    {
+            //        a , 
+            //        ar
+
+            //    });
+
+            //foreach (var item in AircraftAirline)
+            //{
+            //    Console.WriteLine($"Airline: {item.a.AirlineName}, Aircraft Model: {item.ar.Model}");
+            //}
+            #endregion
+
+            #region Q4
+            //4.Show all transactions(id, amount, description) along with the airline name, but only where Amount > 20000.
+
+            //var allTransaction = airlineDbContext.Transactions.Join(airlineDbContext.Airlines, t => t.AirlineID
+            //, a => a.AirlineID, (t, a) => new
+            //{
+            //    t.TransactionId ,
+            //    t.TransactionAmount,
+            //    t.TransactionDescription,
+            //    a.AirlineName,
+
+
+            //}).Where(a=>a.TransactionAmount > 20000);
+
+            //foreach (var item in allTransaction)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
             #endregion
             #endregion
             #endregion
